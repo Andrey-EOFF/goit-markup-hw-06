@@ -107,8 +107,229 @@ body {
 
   cursor: pointer;
 }
+.close-modal:hover, 
+.close-modal:focus{
+  outline:none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  fill: var(--accent-secondary-bg-color);
+}
 
-/* HOMEWORK  55555555555555555555555555555555555555555555555 */
+/* HOMEWORK  666666666 MODAL FORM 66666666666666666666666666666666*/
+
+.form-title {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.form-modal {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.form-field label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.form-feedback {
+  margin-bottom: 20px;
+}
+.form-feedback label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  padding: 11px 12px 12px 42px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover,
+ .form-input:focus{
+  outline:none;
+  border: 1px solid var(--accent-secondary-bg-color);
+  cursor: pointer;
+}
+.form-input:hover ~ .icon-input {
+  fill: #2196f3;
+}
+
+.form-input:focus ~ .icon-input {
+  fill: #2196f3;
+}
+
+
+.form-icon {
+  position: relative;
+  display: flex;
+
+  margin-top: 4px;
+}
+
+.textarea {
+  margin-top: 4px;
+}
+
+.icon-input {
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  fill: #212121;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea {
+  display: block;
+  padding: 16px 12px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+}
+
+.form-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: #2196f3;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.label-policy {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-icon {
+  display: inline-block;
+
+  margin-right: 7px;
+  width: 15px;
+  height: 16px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background: #2196f3;
+  border: 2px solid #2196f3;
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.form-checkbox {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+
+.button-form {
+  display: flex;
+
+  height: 50px;
+
+  outline: none;
+  align-items: center;
+  text-align: center;
+
+  cursor: pointer;
+  padding: 10px 52px;
+
+  color: var(--base-white-color);
+  background-color: var(--accent-secondary-bg-color);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border: #2196f3;
+  border-radius: 4px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-form:hover,
+.button-form:focus {
+  background-color: var(--button-bg-active);
+  background-origin: padding-box;
+}
+/* HOMEWORK  666666666 MODAL FORM 66666666666666666666666666666666*/
+
+/* HOMEWORK  555555555555555555555556666666666666666666666666666 */
 
 ul {
   list-style: none;
@@ -300,7 +521,6 @@ ul {
 
   padding-top: 200px;
   padding-bottom: 200px;
-  text-align: center;
 
   height: 600px;
   background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -312,6 +532,7 @@ ul {
 .hero-title {
   color: var(--base-white-color);
 
+  text-align: center;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -802,6 +1023,13 @@ address {
 .footer-link-social:hover {
   background-color: #2196f3;
 }
+
+/* HOMEWORK 66666666666666666666666666666 FOOTEER */
+
+.footer-three {
+  
+}
+
 
 /* Портфолио сторінка друга 0000000000000000000000000000*/
 
