@@ -107,9 +107,9 @@ body {
 
   cursor: pointer;
 }
-.close-modal:hover, 
-.close-modal:focus{
-  outline:none;
+.close-modal:hover,
+.close-modal:focus {
+  outline: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   fill: var(--accent-secondary-bg-color);
 }
@@ -126,7 +126,7 @@ body {
   line-height: 1.15;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .form-modal {
@@ -157,6 +157,8 @@ body {
 }
 
 .form-field {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -169,6 +171,9 @@ body {
 }
 
 .form-input {
+  position: relative;
+
+  margin-top: 4px;
   padding: 11px 12px 12px 42px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -179,8 +184,8 @@ body {
 }
 
 .form-input:hover,
- .form-input:focus{
-  outline:none;
+.form-input:focus {
+  outline: none;
   border: 1px solid var(--accent-secondary-bg-color);
   cursor: pointer;
 }
@@ -192,35 +197,25 @@ body {
   fill: #2196f3;
 }
 
-
-.form-icon {
-  position: relative;
-  display: flex;
-
-  margin-top: 4px;
-}
-
 .textarea {
+  display: block;
   margin-top: 4px;
+  padding: 16px 12px;
+  width: 100%;
+  height: 120px;
+
+  resize: none;
 }
 
 .icon-input {
   display: inline-block;
   position: absolute;
-  top: 11px;
+  bottom: 11px;
   left: 12px;
 
-  fill: #212121;
+  fill: var(--title-text-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.textarea {
-  display: block;
-  padding: 16px 12px;
-  width: 100%;
-  height: 120px;
-  resize: none;
 }
 
 .form-input::placeholder {
@@ -266,10 +261,13 @@ body {
 .label-policy {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .checkbox-icon {
-  display: inline-block;
+  display: block;
+  align-items: center;
+  justify-content: center;
 
   margin-right: 7px;
   width: 15px;
@@ -279,8 +277,8 @@ body {
 }
 
 .checkbox:checked + .checkbox-icon {
-  background: #2196f3;
-  border: 2px solid #2196f3;
+  background: var(--accent-secondary-bg-color);
+  border: 2px solid var(--accent-secondary-bg-color);
   background-image: url(../images/check.svg);
   background-size: contain;
   background-origin: border-box;
@@ -288,6 +286,7 @@ body {
 
 .form-checkbox {
   display: flex;
+  align-items: center;
   justify-content: center;
 
   margin-bottom: 30px;
@@ -314,7 +313,7 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
 
-  border: #2196f3;
+  border: var(--accent-secondary-bg-color);
   border-radius: 4px;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1027,9 +1026,96 @@ address {
 /* HOMEWORK 66666666666666666666666666666 FOOTEER */
 
 .footer-three {
-  
+  margin-left: 93px;
 }
 
+.title-footer-form {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--base-white-color);
+}
+
+.form-footer-input {
+  display: inline-block;
+
+  justify-content: center;
+  align-items: center;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.form-footer-input::placeholder {
+  display: flex;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-form-footer {
+  position: relative;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 62px 10px 28px;
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  background-color: var(--accent-secondary-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--base-white-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-form-footer:hover,
+.button-form-footer:focus {
+  background-color: var(--button-bg-active);
+  background-origin: padding-box;
+}
+
+.icon-footer-input {
+  position: absolute;
+  display: flex;
+
+  margin-left: 10px;
+  top: 11px;
+  right: 28px;
+  fill: var(--base-white-color);
+}
 
 /* Портфолио сторінка друга 0000000000000000000000000000*/
 
