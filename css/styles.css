@@ -78,7 +78,8 @@ body {
   left: 50%;
 
   width: 528px;
-  height: 581px;
+
+  padding: 40px;
 
   border-radius: 4px;
   background-color: #ffffff;
@@ -129,19 +130,13 @@ body {
   color: var(--title-text-color);
 }
 
-.form-modal {
-  width: 100%;
-  height: 100%;
-  padding: 40px;
-}
-
 .form-field label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
 
-  color: #757575;
+  color: var(--primary-text-color);
 }
 
 .form-feedback {
@@ -153,7 +148,7 @@ body {
   line-height: 1.16;
   letter-spacing: 0.01em;
 
-  color: #757575;
+  color: var(--primary-text-color);
 }
 
 .form-field {
@@ -187,7 +182,6 @@ body {
 .form-input:focus {
   outline: none;
   border: 1px solid var(--accent-secondary-bg-color);
-  cursor: pointer;
 }
 .form-input:hover ~ .icon-input {
   fill: #2196f3;
@@ -236,7 +230,7 @@ body {
   letter-spacing: 0.03em;
   text-decoration-line: underline;
 
-  color: #2196f3;
+  color: var(--accent-text-color);
 }
 
 .checkbox {
@@ -265,14 +259,17 @@ body {
 }
 
 .checkbox-icon {
-  display: block;
-  align-items: center;
+  
+  display: inline-block;
   justify-content: center;
-
+  align-items: center;
+ 
+  cursor: pointer;
+  
   margin-right: 7px;
   width: 15px;
-  height: 16px;
-  border: 2px solid #212121;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
   border-radius: 2px;
 }
 
@@ -282,6 +279,9 @@ body {
   background-image: url(../images/check.svg);
   background-size: contain;
   background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
 }
 
 .form-checkbox {
@@ -1077,13 +1077,13 @@ address {
 }
 
 .button-form-footer {
-  position: relative;
+  /* position: relative; */
   display: flex;
 
   justify-content: center;
   align-items: center;
 
-  padding: 10px 62px 10px 28px;
+  /* padding: 10px 62px 10px 28px; */
   margin-left: 12px;
   width: 200px;
   height: 50px;
@@ -1110,12 +1110,12 @@ address {
 }
 
 .icon-footer-input {
-  position: absolute;
-  display: flex;
+  /* position: absolute; */
+  /* display: flex; */
 
   margin-left: 10px;
-  top: 11px;
-  right: 28px;
+  /* top: 11px;
+  right: 28px; */
   fill: var(--base-white-color);
 }
 
